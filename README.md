@@ -1,8 +1,10 @@
 ## MovieList
 Simple MVVM Architecture Apps. Movie List App using Top-rated Movie API from https://www.themoviedb.org/.
 
+
 ##Demo
 ![alt text](https://github.com/gabrielmanalu/MovieList/blob/master/movieList.gif)
+
 
 ##Depedency
 - Glide
