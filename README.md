@@ -1,12 +1,12 @@
 ## MovieList
-Simple MVVM Architecture Apps. Movie List App using Top-rated Movie API from https://www.themoviedb.org/.
+Simple MVVM Architecture Apps. Movie List App using Top-rated Movie API from https://www.themoviedb.org/
 
 
-##Demo
+## Demo
 ![alt text](https://github.com/gabrielmanalu/MovieList/blob/master/movieList.gif)
 
 
-##Depedency
+## Depedency
 - Glide
    - implementation 'com.github.bumptech.glide:glide:4.12.0'
    - annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
