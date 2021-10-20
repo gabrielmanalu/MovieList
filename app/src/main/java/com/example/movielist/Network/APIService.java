@@ -8,6 +8,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface APIService {
-    @GET("volley_array.json")
+    @GET("8Z8Q")
     Call<List<MovieModel>> getMovieList();
 }

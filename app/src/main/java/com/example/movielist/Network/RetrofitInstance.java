@@ -12,7 +12,7 @@ public class RetrofitInstance {
         if(retrofit == null ) {
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("")
+                    .baseUrl("https://jsonkeeper.com/b/")
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();

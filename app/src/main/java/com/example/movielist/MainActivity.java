@@ -1,13 +1,16 @@
 package com.example.movielist;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Item
         mRecyclerView = findViewById(R.id.recyclerView);
         noResult = findViewById(R.id.noResultText);
         mLayoutManager = new GridLayoutManager(this, 1);
+        mLayoutManager.offsetChildrenVertical(20);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new MovieAdapter(this, mMovieModelList, this);
 
@@ -63,6 +67,22 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Item
 
     @Override
     public void onMovieClick(MovieModel movie) {
-        Toast.makeText(this, "Movie : " + movie.getTitle(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Movie : " + movie.getSynopsis(), Toast.LENGTH_LONG).show();
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        builder1.setTitle("SYNOPSIS");
+        builder1.setMessage("" + movie.getSynopsis());
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Okay",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 }
